@@ -38,7 +38,7 @@ $(function(){
 		},dataSelectHandler: function( transaction, results ) {
 		//	alert(results.rows.length); return false;
 		    if (results.rows.length > 0) {
-				 window.location.href = "http://localhost/aherapp/index.html";	
+				 window.location.href = "index.html";	
 				}
 				
 				
