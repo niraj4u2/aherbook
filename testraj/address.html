@@ -90,20 +90,37 @@
 </div>
 
 <div class="media-body">
-<h3 class="ra-first-name">Scan QR Code</h3>
+<h3 class="ra-first-name scan-r">Scan QR Code</h3>
 </div>
 </div>
 </div>
 
 <div class="whiteBox aherBookPart">
-<h3 class="ra-first-name">Aher Book</h3>
+
 <div class="media">
-<div id="MyAherBookImage" class="media-left">
-<img  class="ra-avatar img-responsive" src="images/pic1.jpg">
+<div class="line-bg-img">
+ <h3 class="ra-first-name">PRIYESH WEDS SHILPA</h3>
+ 
+ <div class="date-box">
+  <span class="scan-r">Date:30-05-2016</span>
+  <span class="scan-l">Time:05:30</span>
+ </div>
+ 
+<div class="add-inner-box"> 
+ <label>Address</label>
+ <span>Bhinaar,Thane,Maharastra</span>
+ </div>
+ 
+ <div class="add-inner-box"> 
+ <label>Venue</label>
+ <span>Bhinaar,Thane,Maharastra</span>
+ </div>
+ <span class="red-text">Your presence will add on to our happiness.</span>
+</div>
 </div>
 
 <div class="media-body">
-	<form id="" name="book" action="booklist.html">
+	<form id="" action="booklist.html">
 <div id="dropdwonselection" class="form-group">
 	  
 	 
@@ -112,25 +129,24 @@
 		<div class="col-md-6 text-right" id="date"></div>
 	  </div>
 	 
-	<div class="form-group">	
-		<label for="pwd">Select Book:</label>
-		<select name="book_name" id="MyAherBook" style="width: 100%;" class="form-control selectpicker" data-live-search ="true" required>
-		<option value="">Select Book</option>
-		</select>
-	</div>
+	
 
 	<div class="form-group">
-		<select id="MyAherBookVillage" name="village" style="width: 100%;display:none;" class="form-control selectpicker" data-live-search ="true" required>
+		<select id="MyAherBookVillage" name="village" style="width: 100%;display:none;" class="form-control selectpicker" data-live-search ="true">
 	</select>
 	</div>
 
+
+	<div class="form-group">
+		<select id="MyAherBookusername" name="user_name" style="width: 100%;display:none;" class="form-control selectpicker" data-live-search ="true" required>
+	</select>
 	</div>
 	<div class="form-group">
 		<select id="MyAherBookuserfather" name="father_name" style="width: 100%;display:none;" class="form-control selectpicker" data-live-search ="true" required>
 	</select>
 	</div>
 	<div class="form-group">
-		<select id="MyAherBookuserSirname" name="user_sirname" style="width: 100%;display:none;" class="form-control selectpicker" data-live-search ="true" required>
+		<select id="MyAherBookuserSirname" name="user_sirname" style="width: 100%;display:none;" class="form-control selectpicker" data-live-search ="true">
 	</select>
 	</div>
 
@@ -141,7 +157,7 @@
 
 
 
-<input type="submit" name="submit"  style="float: right;" value="Submit" />
+
 </form>
 </div>
 </div>
@@ -250,7 +266,7 @@ $(function() {
             container: ".content-container"
         });
 
-         $("#menu-link").click(function() {
+        $("#menu-link").click(function() {
             $("#menu-content").data("kendoMobileDrawer").show();
 			//$('#menu-content').hide('slide', {direction: 'left'}, 1000);
             return false;

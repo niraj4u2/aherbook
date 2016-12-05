@@ -3,7 +3,6 @@
 <head>
 <title>Aher Book</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
 <!-- <link href="css/kendo.common.min.css" rel="stylesheet"> -->
 <link rel="stylesheet" href="css/kendo.common-bootstrap.min.css" />
 <link href="css/kendo.bootstrap.min.css" rel="stylesheet">
@@ -13,16 +12,6 @@
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/adsSlider.css">
- 
-<script src="js/jquery.min.js"></script>
-
-<script src="js/kendo.all.min.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/jquery.cookie.js"></script>
-<script src="js/main.js"></script>
-<script src="js/db.js"></script>
-<script src="js/advt.js"></script>
-
 </head>
 <body class="pagebg">
 <!-- <div data-role="layout" data-id="foo" data-platform="ios">
@@ -69,12 +58,13 @@
 <div class="col-lg-12 p0">
 <section class="well user_profile mb0" id="profile">
 <div class="media">
-<div class="left_profile" class="media-left">
+<div class="media-left">
+<img class="ra-avatar img-responsive" src="images/userPic.jpg">
 </div>
 
 <div class="media-body">
-	<span id="profile_name" class="ra-first-name">Hi, Priyesh</span>
-	<div class="ra-position">Welcome to आहेर Book</div>
+<span class="ra-first-name">Hi, Priyesh</span>
+<div class="ra-position">Welcome to आहेर Book</div>
 </div>
 </div>
 </section>
@@ -98,51 +88,17 @@
 <div class="whiteBox aherBookPart">
 <h3 class="ra-first-name">Aher Book</h3>
 <div class="media">
-<div id="MyAherBookImage" class="media-left">
-<img  class="ra-avatar img-responsive" src="images/pic1.jpg">
+<div class="media-left">
+<img class="ra-avatar img-responsive" src="images/pic1.jpg">
 </div>
-
 <div class="media-body">
-	<form id="" name="book" action="booklist.html">
-<div id="dropdwonselection" class="form-group">
-	  
-	 
-	  <div class="row">
-		<div class="col-md-6" id="Couple_name"></div>
-		<div class="col-md-6 text-right" id="date"></div>
-	  </div>
-	 
-	<div class="form-group">	
-		<label for="pwd">Select Book:</label>
-		<select name="book_name" id="MyAherBook" style="width: 100%;" class="form-control selectpicker" data-live-search ="true" required>
-		<option value="">Select Book</option>
-		</select>
-	</div>
+<div class="form-group">
+<select id="MyAherBook" style="width: 100%;" class="">
+<option>My Aher Book</option>
+<option>Priyesh Weds Shilpa</option>
+<option>Yogesh Weds Yogini</option>
+</select>
 
-	<div class="form-group">
-		<select id="MyAherBookVillage" name="village" style="width: 100%;display:none;" class="form-control selectpicker" data-live-search ="true" required>
-	</select>
-	</div>
-
-	</div>
-	<div class="form-group">
-		<select id="MyAherBookuserfather" name="father_name" style="width: 100%;display:none;" class="form-control selectpicker" data-live-search ="true" required>
-	</select>
-	</div>
-	<div class="form-group">
-		<select id="MyAherBookuserSirname" name="user_sirname" style="width: 100%;display:none;" class="form-control selectpicker" data-live-search ="true" required>
-	</select>
-	</div>
-
-
-
-
-
-
-
-
-<input type="submit" name="submit"  style="float: right;" value="Submit" />
-</form>
 </div>
 </div>
 </div>
@@ -152,10 +108,6 @@
 
 <!-- <ul class="cd-gallery">
 <li>
-
-
-
-
 <ul class="cd-item-wrapper">
 <li class="selected">
 <img src="images/ads-1.jpg" alt="Preview image">
@@ -188,7 +140,8 @@
 		<div class="col-lg-12 p0">
 			<section class="well mb0" id="profile">
 				<div class="media">
-					<div  class="left_profile" class="media-left">
+					<div class="media-left">
+						<img class="ra-avatar img-responsive" src="images/couple.jpg">
 						</div>
 						<div class="media-body">
 							<img alt="" src="images/barlogo.png" class="km-image">
@@ -219,7 +172,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="qrcode.html">
+					<a href="#">
 						<i class="fa fa-qrcode"></i> QR Code Generate
 					</a>
 				</li>
@@ -242,6 +195,14 @@
 </div>
 
 
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/kendo.all.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/main.js"></script>
+<script src="js/db.js"></script>
+<script src="js/advt.js"></script>
+
 <script>
 	//var user_data  =$.parseJSON($.cookie("UserData")); 
 
@@ -250,7 +211,7 @@ $(function() {
             container: ".content-container"
         });
 
-         $("#menu-link").click(function() {
+        $("#menu-link").click(function() {
             $("#menu-content").data("kendoMobileDrawer").show();
 			//$('#menu-content').hide('slide', {direction: 'left'}, 1000);
             return false;

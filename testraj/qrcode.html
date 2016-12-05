@@ -83,18 +83,7 @@
 </div>
 			
 <section class="p15">
-<div class="whiteBox qrcodePart mb20">
-<div class="media">
-<div class="media-left">
-<img class="ra-avatar img-responsive" src="images/qrcode.jpg">
-</div>
-
-<div class="media-body">
-<h3 class="ra-first-name">Scan QR Code</h3>
-</div>
-</div>
-</div>
-
+ 
 <div class="whiteBox aherBookPart">
 <h3 class="ra-first-name">Aher Book</h3>
 <div class="media">
@@ -103,7 +92,7 @@
 </div>
 
 <div class="media-body">
-	<form id="" name="book" action="booklist.html">
+	<form id="" action="booklist.html">
 <div id="dropdwonselection" class="form-group">
 	  
 	 
@@ -119,29 +108,7 @@
 		</select>
 	</div>
 
-	<div class="form-group">
-		<select id="MyAherBookVillage" name="village" style="width: 100%;display:none;" class="form-control selectpicker" data-live-search ="true" required>
-	</select>
-	</div>
-
-	</div>
-	<div class="form-group">
-		<select id="MyAherBookuserfather" name="father_name" style="width: 100%;display:none;" class="form-control selectpicker" data-live-search ="true" required>
-	</select>
-	</div>
-	<div class="form-group">
-		<select id="MyAherBookuserSirname" name="user_sirname" style="width: 100%;display:none;" class="form-control selectpicker" data-live-search ="true" required>
-	</select>
-	</div>
-
-
-
-
-
-
-
-
-<input type="submit" name="submit"  style="float: right;" value="Submit" />
+	  
 </form>
 </div>
 </div>
@@ -149,36 +116,9 @@
 </div>
 
 </section>
+ 
 
-<!-- <ul class="cd-gallery">
-<li>
-
-
-
-
-<ul class="cd-item-wrapper">
-<li class="selected">
-<img src="images/ads-1.jpg" alt="Preview image">
-</li>
-
-<li class="move-right" data-sale="true" data-price="$22">
-<img src="images/ads-2.jpg" alt="Preview image">
-</li>
-
-<li>
-<img src="images/ads-3.jpg" alt="Preview image">
-</li>
-</ul>
-</li>
-
-</ul> -->
-
-<ul class="cd-gallery">
-	<li>
-		<ul class="cd-item-wrapper" id ="adsbanner">
-			
-							
-		</ul>
+ 
 </div>
 <div id="menu-content" style="display:none;">
 	<a href="#" class="closemenu-link">
@@ -197,6 +137,7 @@
 					</section>
 				</div>
 			</div>
+			
 			<ul>
 				<li>
 					<a  id="logout" href="javascript:void(0);">
@@ -249,25 +190,33 @@ $(function() {
         $("#menu-content").kendoMobileDrawer({
             container: ".content-container"
         });
-
-         $("#menu-link").click(function() {
+        $("#menu-link").click(function() {
             $("#menu-content").data("kendoMobileDrawer").show();
 			//$('#menu-content').hide('slide', {direction: 'left'}, 1000);
             return false;
         });
-
         $(".closemenu-link").click(function() {
             $("#menu-content").data("kendoMobileDrawer").hide();
             return false;
         });
-
     });
 	
 $(document).ready(function () {
 var app;
 app = new kendo.mobile.Application($(document.body), { transition: "slide" });
  
-});		
+});	
+ 
+    $(function(){
+      // bind change event to select
+      $('#MyAherBook').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = 'qrdetail.html?book_id='+url; // redirect
+          }
+          return false;
+      });
+    }); 	
 </script> 
 
 
